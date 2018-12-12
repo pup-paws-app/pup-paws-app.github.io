@@ -295,13 +295,14 @@ section.dog-summary-card{
 
 img.dog-photo, img.profile-image{
   border-radius: 50%;
-  width: 30%;
-  height: auto;
+  width: 120px;
+  height: 120px;
   margin: 0 auto 0 auto;
   -webkit-box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
   -moz-box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
   box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
   align-self: center;
+  object-fit: cover;
 }
 
 section.dog-summary-card .dog-info{
