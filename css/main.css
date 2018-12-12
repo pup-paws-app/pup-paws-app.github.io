@@ -1,0 +1,450 @@
+/*--------------------- VARIABLES       */
+:root{
+  --tiny-spacing: 5px;
+  --small-spacing: 15px;
+  --medium-spacing: 30px;
+  --large-spacing: 50px;
+  --light-grey: #EFEFEF;
+  --medium-grey: #999999;
+  --dark-grey: #555555;
+  --medium-light-grey: #CCCCCC;
+  --main-green: #00d4c7b0;
+  --dark-green: #009588;
+  --super-light-yellow: #fffefc;
+  --
+}
+
+body{
+  font-family: 'proxima-nova', helvetica, sans-serif !important;
+
+  background-color: #fff;
+}
+
+/*--------------------------- HEADINGS, WRAPPER, TOP BAR, BOTTOM BAR   */
+
+.main-heading {
+  font-family: 'proxima-nova', helvetica, sans-serif;
+  font-size: 1.25em;
+  background-color: var(--dark-green);
+  color: #fff;
+  line-height: 2;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'proxima-nova', helvetica, sans-serif;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+
+h1{
+  font-size: 2em;
+}
+
+h2{
+  font-size: 1.5em;
+  line-height: 1.5em;
+  font-weight: bold;
+
+}
+
+h3{
+  font-size: 1.225em;
+  font-weight: bold;
+}
+
+h4{
+  font-size: 1.125em;
+  font-weight: bold;
+}
+
+main{
+  margin-bottom: var(--large-spacing);
+}
+
+.content-wrapper{
+  padding: var(--medium-spacing);
+
+}
+
+.fixed-footer {
+  position: fixed;
+  width: 100%;
+  height: var(--large-spacing);
+  background-color: var(--super-light-yellow);
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  z-index: 99;
+  -webkit-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 14px -3px rgba(0,0,0,0.75);
+}
+.fixed-footer li {
+  text-align: center;
+  line-height: 3;
+}
+
+.fixed-footer li:not(:last-child){
+  border-right: 1px solid var(--light-grey);
+}
+
+.fixed-footer a {
+  color: var(--medium-grey);
+  font-size: 1.125em;
+}
+
+
+
+/*------------------------- CONTENT -------*/
+
+p.steps{
+  text-align: center;
+  color: var(--medium-grey);
+}
+
+/*section.content{
+  height: 100%;
+  background-color: var(--main-green);
+}*/
+
+header h1{
+  text-align: center;
+}
+
+p{
+  margin: 0;
+}
+
+
+
+.setup-content{
+  background-color: white;
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
+}
+
+.content-wrapper.setup{
+  padding: 3.5em var(--medium-spacing);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  /*position: absolute;*/
+  top: 0;
+  bottom: 0;
+  background-color: var(--main-green);
+  /*z-index: -1;*/
+}
+
+.setup-content p{
+  line-height: 1.5em;
+}
+
+.card{
+  border-radius: 4px;
+  padding: var(--small-spacing);
+}
+
+.dog-logo {
+ width: 50%;
+ max-width: 200px;
+ display: block;
+ margin: 0 auto var(--medium-spacing) auto;
+}
+
+.centered-copy{
+  margin-bottom: var(--medium-spacing);
+}
+
+.setup-button{
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.setup-actions{
+  margin: var(--large-spacing) 0;
+  display: flex;
+  flex-flow: row;
+}
+
+.back-and-page{
+  display: flex;
+  flex-flow: row-reverse;
+  justify-content: space-between;
+
+}
+
+.setup-button{
+  width: 60%;
+}
+
+.skip-button{
+  width: 30%;
+}
+
+.setup-section{
+  background-color: var(--light-grey)
+}
+
+.back{
+  color: var(--medium-grey);
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.select-gender, .select-mood{
+  display: flex;
+  flex-flow: row;
+}
+
+.gender-form-label{
+  width: 50%;
+  padding-top: var(--medium-spacing);
+  padding-bottom: var(--medium-spacing);
+}
+
+.mood-form-label{
+  width: calc(100% / 3);
+  padding-top: var(--medium-spacing);
+  padding-bottom: var(--medium-spacing);
+}
+
+/* HIDE RADIO */
+input.gender-input[type="radio"], input.mood-input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+input.gender-input[type="radio"] + i, input.mood-input[type="radio"] + i {
+  cursor: pointer;
+  height: auto;
+  font-size: 3em;
+  opacity: .3;
+}
+
+/* CHECKED STYLES */
+input.gender-input[type="radio"]:checked + i, input.mood-input[type="radio"]:checked + i {
+  opacity: 1;
+}
+
+
+.btn-file {
+  /*position: relative;*/
+  overflow: hidden;
+  margin: 50px 0;
+  display: block;
+  background-color: #EFEFEF;
+  padding: 30px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    outline: none;
+    background: #fff;
+    cursor: inherit;
+    display: block;
+}
+
+/*------------------------------- DASHBOARD ---------*/
+section.dashboard-section{
+  padding: var(--medium-spacing);
+  border-bottom: 1px solid var(--medium-light-grey);
+}
+
+.dashboard-section-header{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--small-spacing);
+}
+
+.dashboard-section-header a{
+  font-size: 1.225em;
+  color: var(--dark-grey);
+}
+
+
+section.dog-summary-card{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  padding: 0 var(--medium-spacing);
+}
+
+img.dog-photo, img.profile-image{
+  border-radius: 50%;
+  width: 30%;
+  height: auto;
+  margin: 0 auto 0 auto;
+  -webkit-box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 43px -5px rgba(0,0,0,0.5);
+  align-self: center;
+}
+
+section.dog-summary-card .dog-info{
+  width: 100%;
+  align-self: center;
+  /*text-align: left;*/
+  padding: var(--medium-spacing) var(--medium-spacing) 0 var(--medium-spacing);
+  padding: var(--medium-spacing);
+  border-bottom: 1px solid var(--medium-light-grey);
+}
+
+section.dog-summary-card h3{
+  /*color: var(--main-green);*/
+}
+
+section.dog-summary-card p{
+  text-transform: uppercase;
+}
+
+section.dog-summary-card p.dog-name{
+  font-weight: bold;
+}
+
+
+
+li.reminder-item{
+  display: grid;
+  grid-template-columns: 25% 65% 10%;
+  align-items: center;
+}
+
+div.checkbox{
+  justify-self: end;
+}
+
+div.checkbox label{
+  margin: auto 0;
+}
+input[type="checkbox"] { display:none; } /* to hide the checkbox itself */
+input[type="checkbox"] + span:before {
+  font-family: 'Font Awesome 5 Free';
+  display: inline-block;
+  font-size: 1.5em;
+  justify-self: end;
+  color: var(--medium-grey);
+}
+
+input[type="checkbox"]:checked + span:before{
+  content: "\f14a";
+  font-weight: 900;
+  color: var(--dark-green);
+}
+
+input[type="checkbox"] + span:before{
+  content: "\f14a";
+  font-weight: normal;
+}
+
+/*.dashboard-chart{
+  margin-top: var(--medium-spacing);
+}*/
+
+.ct-series-a .ct-line, .ct-series-a .ct-point {
+  stroke: var(--dark-green);
+}
+
+/*-------------------- JOURNAL ------*/
+section.monthly-entries h3{
+  margin: 0;
+  padding: var(--tiny-spacing);
+  text-align: center;
+  background-color: var(--light-grey);
+}
+
+section.monthly-entries p.not-found{
+  padding: 30px;
+  text-align: center;
+  color: #999;
+}
+
+.activity-entry{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: var(--small-spacing);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.entry-text{
+  margin: 0;
+  padding: 0 var(--small-spacing);
+}
+
+.entry-text h4{
+  margin: 0;
+  padding: 0;
+}
+
+.journal-list p.title{
+  font-weight: 600;
+}
+
+.action-add-button{
+  display: inline-block;
+  position: fixed;
+  z-index: 9999;
+  right: 10%;
+  bottom: 10%;
+}
+
+
+
+/*------------------------ PROFILE    */
+
+.owner-info{
+  text-align: center;
+  border-bottom: 1px solid var(--medium-grey);
+  padding-bottom: var(--medium-spacing);
+}
+
+.dogs-info ul{
+  margin-top: var(--medium-spacing);
+}
+
+.dogs-info ul li{
+  display: flex;
+  flex-flow: row;
+  padding: var(--medium-spacing);
+}
+
+.dogs-info ul li img{
+  width: 30%;
+  align-self: center;
+}
+
+.dogs-info ul li h4{
+  width: 60%;
+  align-self: center;
+  padding: var(--medium-spacing);
+}
+
+.dogs-info ul li a{
+  width: 10%;
+  align-self: center;
+  font-size: 1.5em;
+  color: var(--dark-grey);
+}
